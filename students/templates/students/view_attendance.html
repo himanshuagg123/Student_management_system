@@ -1,0 +1,17 @@
+<!-- view_attendance.html -->
+
+<h2>Attendance Records</h2>
+<table>
+    <tr>
+        <th>Student</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+    {% for attendance in attendances %}
+        <tr>
+            <td>{{ attendance.student.name }}</td>
+            <td>{{ attendance.date }}</td>
+            <td>{{ 'Present' if attendance.status else 'Absent' }}</td>
+        </tr>
+    {% endfor %}
+</table>

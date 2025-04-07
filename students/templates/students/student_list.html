@@ -1,0 +1,20 @@
+<!-- students/templates/students/student_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    <a href="{% url 'student_add' %}">Add Student</a>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.name }} - {{ student.age }} years old - {{ student.email }} 
+                <a href="{% url 'student_edit' student.pk %}">Edit</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

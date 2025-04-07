@@ -1,0 +1,10 @@
+<form method="POST">
+    {% csrf_token %}
+    {% for student in students %}
+        <label>
+            {{ student.name }}:
+            <input type="checkbox" name="present_{{ student.id }}">
+        </label><br>
+    {% endfor %}
+    <button type="submit">Submit Attendance</button>
+</form>
