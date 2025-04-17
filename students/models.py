@@ -57,3 +57,5 @@ class Marks(models.Model):
 
     def __str__(self):
         return f"{self.student.name} - {self.course.course_name} - {self.marks} - {self.year}"
+
+# changes
